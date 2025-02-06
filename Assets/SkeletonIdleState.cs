@@ -21,11 +21,10 @@ public class SkeletonIdleState : SkeletonGroundedState
     public override void Update()
     {
         base.Update();
+
         if (stateTimer < 0)
             stateMachine.ChangeState(enemy.moveState);
 
-        if(enemy.IsPlayerDetected())
-            stateMachine.ChangeState(enemy.battleState);
         
 
     }

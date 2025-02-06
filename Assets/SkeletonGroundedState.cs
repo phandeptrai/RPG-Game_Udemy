@@ -22,7 +22,8 @@ public class SkeletonGroundedState : EnemyState
     {
         base.Update();
 
-        if(enemy.IsGroundDetected())
+        if (enemy.IsPlayerDetected())
             stateMachine.ChangeState(enemy.battleState);
+
     }
 }
