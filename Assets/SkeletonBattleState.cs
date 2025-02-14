@@ -27,12 +27,12 @@ public class SkeletonBattleState : EnemyState
             if(enemy.IsPlayerDetected().distance < enemy.attackDistance)
             {
                 if(CanAttack())
-                stateMachine.ChangeState(enemy.attackState);
+                    stateMachine.ChangeState(enemy.attackState);
             }
         }
         else
         {
-            if(stateTimer <= 0 || Vector2.Distance(enemy.transform.position, player.position) > 7)
+            if(stateTimer <= 0 || Vector2.Distance(player.transform.position, enemy.transform.position) > 7)
             {
                 stateMachine.ChangeState(enemy.idleState);
             }
@@ -62,8 +62,7 @@ public class SkeletonBattleState : EnemyState
             enemy.lastTimeAttack = Time.time;
             return true;
         }
-        Debug.Log("attack is cool down");
-            return false;
+        return false;
         
     }
 }
