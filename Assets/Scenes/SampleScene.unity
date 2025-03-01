@@ -919,6 +919,8 @@ MonoBehaviour:
   moveSpeed: 3
   idleTime: 1
   battleTime: 7
+  stunDuration: 1
+  stunDirection: {x: 5, y: 7}
   attackDistance: 1.67
   attackCooldown: 0.5
   lastTimeAttack: 0
